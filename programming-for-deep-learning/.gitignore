@@ -2,4 +2,7 @@ events.out.tfevents*
 /*/data
 /*/mnist
 */__pycache__
+
+images
+runs
 .vscode

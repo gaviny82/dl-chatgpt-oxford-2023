@@ -69,8 +69,8 @@ class CitiesDataset:
         img_fp = self.all_imgs[example_idx]
         return self.get_X_y_from_fp(img_fp)
 
-    def get_X_y_from_fp(self, img_fp):
-        city_name = img_fp.split("/")[1]
+    def get_X_y_from_fp(self, img_fp:str):
+        city_name = img_fp.replace('\\', '/').split('/')[1]
         # print(img_fp)
         img = Image.open(img_fp)
         if self.transform:
